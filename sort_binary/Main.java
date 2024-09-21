@@ -11,12 +11,13 @@ public class Main{
 
         int[] arrayOfNums = {8,6,9,5,3,2,0,1,10,4,7};
         System.out.print("original array: ");
-        for(int i=0; i< arrayOfNums.length; i++)
+        for(int i=0; i< arrayOfNums.length; i++){
         System.out.print(arrayOfNums[i] + " ");  
+    }
 
         // this is where the logic begins in sorting the array
 
-        int temp= 0;
+        int temp;
 
         for(int i=0; i< arrayOfNums.length; i++){
             for(int j = i +1; j< arrayOfNums.length; j++){
@@ -32,21 +33,24 @@ public class Main{
         // this code just prints out the new array for 
         //us to see with the logic implemented above 
 
-        System.out.print("\n original array: ");
-        for(int i=0; i< arrayOfNums.length; i++)
+        System.out.print("\n new sorted array: ");
+        for(int i=0; i< arrayOfNums.length; i++){
         System.out.print(arrayOfNums[i] + " "); 
 
-
+    }
 
         // Binary SEARCH for a target value
 
         int target = 8;
-
-        // built in binary search 
-        
-
-
-        //
+            // Call the custom binary search method
+        int result = binarySearch(arrayOfNums, target);
+        if (result != -1) {
+         System.out.println("\nTarget " + target + " found at index: " + result);
+        } else {
+            System.out.println("\nTarget " + target + " not found.");
+        }
+    }
+ 
 
         // Custom Binary Search method
 
@@ -76,3 +80,6 @@ public class Main{
 
 
 }
+
+
+
